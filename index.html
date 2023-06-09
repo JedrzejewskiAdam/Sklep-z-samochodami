@@ -15,12 +15,13 @@
   </select>
   <select id="car-year">
     <option value="all">Wszystkie lata</option>
-    <option value="2022">2022</option>
+    <option value="2019">2019</option>
     <option value="2021">2021</option>
+    <option value="2022">2022</option>
     <option value="2023">2023</option>
   </select>
   <div class="car-list">
-    <div class="car-item" data-brand="audi">
+    <div class="car-item" data-brand="audi" data-year="2022">
       <img src="auta/audi/audia8.jpg" alt="Car 1">
       <p>Marka: Audi A8</p>
       <p>Moc silnika: 462KM</p>
@@ -28,7 +29,7 @@
       <p>Rok produkcji: 2022</p>
       <p>Cena: 600000 PLN</p>
     </div>
-    <div class="car-item" data-brand="bmw">
+    <div class="car-item" data-brand="bmw" data-year="2021">
       <img src="auta/bmw/bmwg22.jpg" alt="Car 2">
       <p>Marka: BMW G22</p>
       <p>Moc silnika: 374KM</p>
@@ -36,7 +37,7 @@
       <p>Rok produkcji: 2021</p>
       <p>Cena: 230000 PLN</p>
     </div>
-    <div class="car-item" data-brand="mercedes">
+    <div class="car-item" data-brand="mercedes" data-year="2023">
       <img src="auta/mercedes/mercedess63e.jpg" alt="Car 3">
       <p>Marka: Mercedes AMG S63e</p>
       <p>Moc silnika: 612KM</p>
@@ -44,7 +45,7 @@
       <p>Rok produkcji: 2023</p>
       <p>Cena: 1200000 PLN</p>
     </div>
-    <div class="car-item" data-brand="volkswagen">
+    <div class="car-item" data-brand="volkswagen" data-year="2022">
       <img src="auta/volkswagen/volkswagengolfr.jpg" alt="Car 4">
       <p>Marka: Volkswagen Golf R</p>
       <p>Moc silnika: 315KM</p>
@@ -52,7 +53,7 @@
       <p>Rok produkcji: 2022</p>
       <p>Cena: 350000 PLN</p>
     </div>
-    <div class="car-item" data-brand="bmw">
+    <div class="car-item" data-brand="bmw" data-year="2021">
       <img src="auta/bmw/bmwi4.jpg" alt="Car 4">
       <p>Marka: Bmw i4</p>
       <p>Moc silnika: 544KM</p>
@@ -60,7 +61,7 @@
       <p>Rok produkcji: 2021</p>
       <p>Cena: 260000 PLN</p>
     </div>
-    <div class="car-item" data-brand="mercedes">
+    <div class="car-item" data-brand="mercedes" data-year="2021">
       <img src="auta/mercedes/mercedesc180.jpg" alt="Car 5">
       <p>Marka: Mercedes c180</p>
       <p>Moc silnika: 190KM</p>
@@ -68,7 +69,7 @@
       <p>Rok produkcji: 2021</p>
       <p>Cena: 200000 PLN</p>
     </div>
-    <div class="car-item" data-brand="volkswagen">
+    <div class="car-item" data-brand="volkswagen" data-year="2023">
       <img src="auta/volkswagen/volkswagentiago.jpg" alt="Car 6">
       <p>Marka: Volkswagen Taigo</p>
       <p>Moc silnika: 95KM</p>
@@ -76,7 +77,7 @@
       <p>Rok produkcji: 2023</p>
       <p>Cena: 80000 PLN</p>
     </div>
-    <div class="car-item" data-brand="mercedes">
+    <div class="car-item" data-brand="mercedes" data-year="2019">
       <img src="auta/mercedes/mercedesC200d.jpg" alt="Car 7">
       <p>Marka: Mercedes c200d</p>
       <p>Moc silnika: 183KM</p>
@@ -84,7 +85,7 @@
       <p>Rok produkcji: 2019</p>
       <p>Cena: 260000 PLN</p>
     </div>
-    <div class="car-item" data-brand="volkswagen">
+    <div class="car-item" data-brand="volkswagen" data-year="2023">
       <img src="auta/volkswagen/volkswagenpolo.jpg" alt="Car 8">
       <p>Marka: Volkswagen Polo</p>
       <p>Moc silnika: 80KM</p>
@@ -161,7 +162,7 @@
     <img id="car-image" src="" alt="Car Image">
     <p>Metoda płatności: <span id="payment-method"></span></p>
     <p>Cena auta z akcesoriami: <span id="total-price"></span> PLN</p>
-    <p>Data odbioru     <a id="gowno"></a></p>
+    <p>Data odbioru<a id="gowno"></a></p>
     <p>Dziękujemy za zakup!</p>
   </div>
   <script src="script.js"></script>
