@@ -9,20 +9,20 @@ body {
   background-image: url("background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #f1f1f1;
+  background-color: #975d05;
   padding: 20px;
 }
 
 @media only screen and (max-width: 1000px) {
   body {
     background-image: url("background.jpg");
-    background-color: #007bff;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #f1f1f1;
     height: 100vh; /* Ustawienie wysokości na 100% widoku okna przeglądarki */
     margin: 0; /* Usunięcie marginesów */
-    overflow: hidden; /* Ukrycie ewentualnego przewijania */
+    background-position: center center; /* Ustawienie pozycji obrazu na środek */
+    background-attachment: fixed; /* Utrwalenie obrazu tła */
   }
 }
 
