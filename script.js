@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var selectedYear = carYearSelect.value;
 
     carItems.forEach(function (carItem) {
-      var carYear = carItem.querySelector("p:nth-child(3)").textContent.split(":")[1].trim();
+      var carYear = carItem.getAttribute("data-year");
 
       if (selectedYear === "all" || carYear === selectedYear) {
         carItem.style.display = "block";
@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var selectedCar = null;
   var selectedAccessories = [];
 
+  // Show configuration form and hide car list
   function showConfigForm(car) {
     carBrandSelect.style.display = "none";
     carYearSelect.style.display = "none";
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     configForm.style.display = "block";
   }
 
+  // Show car list and hide configuration form
   function showCarList() {
     selectedCar = null;
     configForm.style.display = "none";
@@ -60,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     carYearSelect.style.display = "inline";
   }
 
+  // Create accessories list
   function createAccessoriesList() {
     var accessoriesList = document.getElementById("accessories-list");
 
@@ -104,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return totalPrice;
   }
 
+  // Update total price display
   function updateTotalPrice() {
     var totalPriceElement = document.getElementById("total-price");
     var totalPrice = calculateTotalPrice();
@@ -111,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
+  // Handle purchase button click event
   purchaseBtn.addEventListener("click", function () {
     var financing = document.querySelector('input[name="financing"]:checked');
     var name = document.getElementById("name").value;
@@ -137,23 +142,27 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
+    // Display summary page
     carImage.src = selectedCar.querySelector("img").src;
     paymentMethod.textContent = financing.value;
     updateTotalPrice();
     showSummaryPage();
   });
 
+  // Handle back button click event
   backBtn.addEventListener("click", function () {
     document.getElementById("form-error").textContent = "";
     selectedAccessories = [];
     showCarList();
   });
 
+  // Show summary page
   function showSummaryPage() {
     configForm.style.display = "none";
     document.querySelector(".summary-page").style.display = "block";
   }
 
+  // Attach event listeners to car items
   var carItems = document.querySelectorAll(".car-item");
   carItems.forEach(function (carItem) {
     carItem.addEventListener("click", function () {
@@ -161,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Attach event listener to accessories list
   var accessoriesList = document.querySelector(".accessories-list");
   accessoriesList.addEventListener("change", function (event) {
     var checkbox = event.target;
@@ -188,6 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
 var paragraphElement = document.createElement("p");
 paragraphElement.innerHTML = deliveryDate;
 
+// Dodaj wygenerowany <p> do odpowiedniego elementu na stronie
 var gowno1 = document.getElementById("gowno");
 gowno1.appendChild(paragraphElement);
 
