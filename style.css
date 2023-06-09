@@ -231,3 +231,47 @@ select#car-brand option,
 select#car-year option {
   font-size: 16px;
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .car-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .car-item img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .config-form {
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btn-group button {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .summary-page {
+    padding: 10px;
+  }
+}
