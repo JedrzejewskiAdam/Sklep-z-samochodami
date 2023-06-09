@@ -13,6 +13,19 @@ body {
   padding: 20px;
 }
 
+@media only screen {
+  body {
+    background-image: url("background.jpg");
+    background-color: #007bff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f1f1f1;
+    height: 100vh; /* Ustawienie wysokości na 100% widoku okna przeglądarki */
+    margin: 0; /* Usunięcie marginesów */
+    overflow: hidden; /* Ukrycie ewentualnego przewijania */
+  }
+}
+
 h1 {
   text-align: center;
   color: white;
@@ -232,14 +245,14 @@ select#car-year option {
   font-size: 16px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen {
   h1 {
     margin-bottom: 10px;
     font-size: 24px;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen {
   .car-item {
     width: 100%;
     margin-bottom: 10px;
@@ -247,7 +260,7 @@ select#car-year option {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen {
   .car-item img {
     width: 100%;
     margin-bottom: 10px;
@@ -255,14 +268,14 @@ select#car-year option {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen {
   .config-form {
     margin: 0;
     padding: 10px;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen {
   .btn-group button {
     padding: 5px 10px;
     margin-bottom: 5px;
@@ -270,20 +283,8 @@ select#car-year option {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen {
   .summary-page {
     padding: 10px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-image: url("background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #f1f1f1;
-    height: 100vh; /* Ustawienie wysokości na 100% widoku okna przeglądarki */
-    margin: 0; /* Usunięcie marginesów */
-    overflow: hidden; /* Ukrycie ewentualnego przewijania */
   }
 }
