@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   var carBrandSelect = document.getElementById("car-brand");
   var carYearSelect = document.getElementById("car-year");
+  const priceSlider = document.getElementById("car-price");
+  const PLN = document.getElementById("PLN");
+  const priceValue = document.getElementById("price-value");
   var carItems = document.querySelectorAll(".car-item");
   var configForm = document.querySelector(".config-form");
 
@@ -32,6 +35,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  priceSlider.addEventListener("input", function() {
+    const selectedPrice = parseInt(priceSlider.value);
+  
+    priceValue.textContent = selectedPrice;
+  
+    const carItems = document.querySelectorAll(".car-item");
+  
+    carItems.forEach(function(carItem) {
+      const carPrice = parseInt(carItem.querySelector("p:last-child").textContent.split(" ")[1]);
+  
+      if (carPrice >= selectedPrice) {
+        carItem.style.display = "none"; 
+      } else {
+        carItem.style.display = "block";
+      }
+    });
+  });
+
   
 
   var carList = document.querySelector(".car-list");
@@ -44,22 +65,29 @@ document.addEventListener("DOMContentLoaded", function () {
   var selectedCar = null;
   var selectedAccessories = [];
 
+  // Show configuration form and hide car list
   function showConfigForm(car) {
     carBrandSelect.style.display = "none";
     carYearSelect.style.display = "none";
+    priceSlider.style.display = "none";
+    PLN.style.display = "none";
     selectedCar = car;
     carList.style.display = "none";
     configForm.style.display = "block";
   }
 
+  // Show car list and hide configuration form
   function showCarList() {
     selectedCar = null;
     configForm.style.display = "none";
     carList.style.display = "flex";
     carBrandSelect.style.display = "inline";
     carYearSelect.style.display = "inline";
+    priceSlider.style.display = "inline";
+    PLN.style.display = "inline";
   }
 
+  // Create accessories list
   function createAccessoriesList() {
     var accessoriesList = document.getElementById("accessories-list");
 
@@ -189,5 +217,6 @@ paragraphElement.innerHTML = deliveryDate;
 
 var gowno1 = document.getElementById("gowno");
 gowno1.appendChild(paragraphElement);
+
 
 });
