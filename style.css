@@ -19,10 +19,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #f1f1f1;
-    height: 100vh;
-    margin: 0;
-    background-position: center center;
-    background-attachment: fixed;
+    height: 100vh; /* Ustawienie wysokości na 100% widoku okna przeglądarki */
+    margin: 0; /* Usunięcie marginesów */
+    background-position: center center; /* Ustawienie pozycji obrazu na środek */
+    background-attachment: fixed; /* Utrwalenie obrazu tła */
   }
 }
 
@@ -270,6 +270,8 @@ select#car-year option {
 
 @media only screen and (max-width: 1000px) {
   .config-form {
+    position: relative;
+    left: 30%;
     margin: 0;
     padding: 10px;
   }
